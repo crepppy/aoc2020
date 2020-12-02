@@ -20,8 +20,8 @@ public class DayTwo {
             e.printStackTrace();
         }
 
-        System.out.println("Part 1: " + passwords.stream().filter(DayTwo::isValidCount));
-        System.out.println("Part 2: " + passwords.stream().filter(DayTwo::isValidPosition));
+        System.out.println("Part 1: " + passwords.stream().filter(DayTwo::isValidCount).count());
+        System.out.println("Part 2: " + passwords.stream().filter(DayTwo::isValidPosition).count());
     }
 
     public static boolean isValidCount(String passString) {
@@ -33,8 +33,8 @@ public class DayTwo {
 
         condition = condition.substring(0, condition.length() - 1);
         String[] conditionSplit = condition.split("-");
-        int lower = Integer.parseInt(conditionSplit[0]);
-        int higher = Integer.parseInt(conditionSplit[1]);
+        int lower = Integer.parseInt(conditionSplit[0].trim());
+        int higher = Integer.parseInt(conditionSplit[1].trim());
         return lower <= count && count <= higher;
     }
 
@@ -46,8 +46,8 @@ public class DayTwo {
 
         condition = condition.substring(0, condition.length() - 1);
         String[] conditionSplit = condition.split("-");
-        int pos1 = Integer.parseInt(conditionSplit[0]);
-        int pos2 = Integer.parseInt(conditionSplit[1]);
-        return password.charAt(pos1-1) <= c ^ c <= password.charAt(pos2-1);
+        int pos1 = Integer.parseInt(conditionSplit[0].trim());
+        int pos2 = Integer.parseInt(conditionSplit[1].trim());
+        return password.charAt(pos1-1) == c ^ c == password.charAt(pos2-1);
     }
 }
