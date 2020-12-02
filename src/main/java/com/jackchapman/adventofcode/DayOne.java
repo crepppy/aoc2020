@@ -17,8 +17,8 @@ public class DayOne {
                 expenseReport.add(Integer.parseInt(line));
             }
         }
-        System.out.println(find2020SumOfTwo(expenseReport));
-        System.out.println(find2020SumOfThree(expenseReport));
+        System.out.println("Part 1: " + find2020SumOfTwo(expenseReport));
+        System.out.println("Part 2: " + find2020SumOfThree(expenseReport));
     }
 
     public static int find2020SumOfTwo(List<Integer> expenses) {
