@@ -2,7 +2,7 @@ package com.jackchapman.adventofcode
 
 fun main() {
     val passwords: List<String> =
-        DayTwo::class.java.classLoader.getResourceAsStream("DayTwo.txt")?.bufferedReader()?.readLines().orEmpty()
+        {}::class.java.classLoader.getResourceAsStream("DayTwo.txt")?.bufferedReader()?.readLines().orEmpty()
 
     val matchingCount = passwords.count { isValidCount(it) }
     println("Part 1: $matchingCount")

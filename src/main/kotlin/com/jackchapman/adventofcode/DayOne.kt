@@ -2,7 +2,7 @@ package com.jackchapman.adventofcode
 
 fun main() {
     val expenseReport: List<Int> =
-        DayOne::class.java.classLoader.getResourceAsStream("DayOne.txt")?.bufferedReader()?.readLines()
+        {}::class.java.classLoader.getResourceAsStream("DayOne.txt")?.bufferedReader()?.readLines()
             ?.map { it.toInt() }
             .orEmpty()
     println("Part 1: ${find2020SumOfTwo(expenseReport)}")
