@@ -1,6 +1,9 @@
 plugins {
-    id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.4.20'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 group 'com.jackchapman'
@@ -12,5 +15,5 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
 }
