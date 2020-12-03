@@ -4,12 +4,13 @@ fun main() {
     val map: List<String> =
         {}::class.java.classLoader.getResourceAsStream("DayThree.txt")?.bufferedReader()?.readLines()
             .orEmpty()
-    println("Part 1: ${getCollisions(map, 3)}")
     val prod = getCollisions(map) *
             getCollisions(map, 3) *
             getCollisions(map, 5) *
             getCollisions(map, 7) *
             getCollisions(map, down = 2)
+
+    println("Part 1: ${getCollisions(map, 3)}")
     println("Part 2: $prod")
 }
 
