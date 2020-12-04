@@ -16,7 +16,7 @@ internal class DayThreeTest {
         #.##...#...
         #...##....#
         .#..#...#.#
-        """.trimIndent()
+    """.trimIndent()
 
     @Test
     fun `test collisions only moving vertically by one`() {

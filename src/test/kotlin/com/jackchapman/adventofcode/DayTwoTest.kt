@@ -1,6 +1,6 @@
 package com.jackchapman.adventofcode
 
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 internal class DayTwoTest {
@@ -10,15 +10,15 @@ internal class DayTwoTest {
 
     @Test
     fun `test password on number of characters`() {
-        assertEquals(true, isValidCount(passwordA))
-        assertEquals(false, isValidCount(passwordB))
-        assertEquals(true, isValidCount(passwordC))
+        assertTrue(isValidCount(passwordA))
+        assertFalse(isValidCount(passwordB))
+        assertTrue(isValidCount(passwordC))
     }
 
     @Test
     fun `test password on position of characters`() {
-        assertEquals(true, isValidPosition(passwordA))
-        assertEquals(false, isValidPosition(passwordB))
-        assertEquals(false, isValidPosition(passwordC))
+        assertTrue(isValidPosition(passwordA))
+        assertFalse(isValidPosition(passwordB))
+        assertFalse(isValidPosition(passwordC))
     }
 }
