@@ -1,0 +1,8 @@
+language: java
+install: skip
+os: linux
+dist: focal
+jdk: openjdk11
+
+script:
+  - ./gradlew run test --scan -s
