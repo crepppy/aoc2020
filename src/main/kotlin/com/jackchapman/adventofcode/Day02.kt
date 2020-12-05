@@ -1,14 +1,13 @@
 package com.jackchapman.adventofcode
 
-fun main() {
+fun solveDay2(): Pair<Int, Int> {
     val passwords: List<String> =
-        {}::class.java.classLoader.getResourceAsStream("DayTwo.txt")?.bufferedReader()?.readLines().orEmpty()
+        {}::class.java.classLoader.getResourceAsStream("Day02.txt")?.bufferedReader()?.readLines().orEmpty()
 
     val matchingCount = passwords.count { isValidCount(it) }
-    println("Part 1: $matchingCount")
-
     val matchingPosition = passwords.count { isValidPosition(it) }
-    println("Part 2: $matchingPosition")
+
+    return matchingCount to matchingPosition
 }
 
 // Completed in 7mins 02secs

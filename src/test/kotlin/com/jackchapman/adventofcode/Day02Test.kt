@@ -1,9 +1,10 @@
 package com.jackchapman.adventofcode
 
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
-internal class DayTwoTest {
+internal class Day02Test {
     private val passwordA = "1-3 a: abcde"
     private val passwordB = "1-3 b: cdefg"
     private val passwordC = "2-9 c: ccccccccc"

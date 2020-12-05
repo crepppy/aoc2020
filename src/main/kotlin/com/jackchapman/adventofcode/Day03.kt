@@ -1,8 +1,8 @@
 package com.jackchapman.adventofcode
 
-fun main() {
+fun solveDay3(): Pair<Long, Long> {
     val map: List<String> =
-        {}::class.java.classLoader.getResourceAsStream("DayThree.txt")?.bufferedReader()?.readLines()
+        {}::class.java.classLoader.getResourceAsStream("Day03.txt")?.bufferedReader()?.readLines()
             .orEmpty()
     val prod = getCollisions(map) *
             getCollisions(map, 3) *
@@ -10,8 +10,7 @@ fun main() {
             getCollisions(map, 7) *
             getCollisions(map, down = 2)
 
-    println("Part 1: ${getCollisions(map, 3)}")
-    println("Part 2: $prod")
+    return getCollisions(map, 3) to prod
 }
 
 // Completed in 4mins 34seconds

@@ -3,7 +3,7 @@ package com.jackchapman.adventofcode
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-internal class DayThreeTest {
+internal class Day03Test {
     private val map = """
         ..##.......
         #...#...#..

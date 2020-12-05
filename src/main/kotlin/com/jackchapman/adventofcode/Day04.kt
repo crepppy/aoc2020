@@ -14,16 +14,15 @@ val requiredFields: Map<String, (String) -> Boolean> = mapOf(
     "pid" to { it.length == 9 && it.toIntOrNull() != null }
 )
 
-fun main() {
+fun solveDay4(): Pair<Int, Int> {
     val passports: List<String> =
-        {}::class.java.classLoader.getResourceAsStream("DayFour.txt")?.bufferedReader()?.readLines()
+        {}::class.java.classLoader.getResourceAsStream("Day04.txt")?.bufferedReader()?.readLines()
             .orEmpty().joinToString("\n").split("\n\n")
 
     val valid1 = passports.count { isValidPassport(it, false) }
     val valid2 = passports.count { isValidPassport(it) }
 
-    println("Part 1: $valid1")
-    println("Part 2: $valid2")
+    return valid1 to valid2
 }
 
 // Completed in 20mins 43seconds

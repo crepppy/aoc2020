@@ -1,9 +1,10 @@
 package com.jackchapman.adventofcode
 
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
-internal class DayFourTest {
+internal class Day04Test {
 
     @Test
     fun `test passport has fields`() {
