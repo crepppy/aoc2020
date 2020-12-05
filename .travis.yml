@@ -5,4 +5,4 @@ dist: focal
 jdk: openjdk11
 
 script:
-  - ./gradlew run test --scan -s
+  - ./gradlew run test -s
