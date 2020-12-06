@@ -3,9 +3,7 @@ package com.jackchapman.adventofcode
 
 // Completed in 5mins 56seconds
 fun solveDay5(): Pair<Int, Int> {
-    val boardingPasses =
-        {}::class.java.classLoader.getResourceAsStream("Day05.txt")?.bufferedReader()?.readLines()
-            .orEmpty()
+    val boardingPasses = getInput(5)
 
     val ids: List<Int> = boardingPasses.map { boardingPassSeat(it) }
 

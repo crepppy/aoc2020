@@ -6,6 +6,7 @@ val days: Map<Int, () -> Pair<Any, Any>> = mapOf(
     3 to { solveDay3() },
     4 to { solveDay4() },
     5 to { solveDay5() },
+    6 to { solveDay6() },
 )
 
 fun main(args: Array<String>) {
@@ -29,4 +30,9 @@ fun format(challenge: Int?): String {
             Part 2: ${p.second}
             
     """.trimIndent()
+}
+
+fun getInput(day: Int): List<String> {
+    return {}::class.java.classLoader.getResourceAsStream("Day${day.toString().padStart(2, '0')}.txt")?.bufferedReader()
+        ?.readLines()!!
 }

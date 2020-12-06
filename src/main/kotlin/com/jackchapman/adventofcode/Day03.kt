@@ -1,9 +1,7 @@
 package com.jackchapman.adventofcode
 
 fun solveDay3(): Pair<Long, Long> {
-    val map: List<String> =
-        {}::class.java.classLoader.getResourceAsStream("Day03.txt")?.bufferedReader()?.readLines()
-            .orEmpty()
+    val map: List<String> = getInput(3)
     val prod = getCollisions(map) *
             getCollisions(map, 3) *
             getCollisions(map, 5) *

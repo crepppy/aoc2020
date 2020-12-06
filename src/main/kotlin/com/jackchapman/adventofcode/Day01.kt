@@ -1,10 +1,7 @@
 package com.jackchapman.adventofcode
 
 fun solveDay1(): Pair<Int, Int> {
-    val expenseReport: List<Int> =
-        {}::class.java.classLoader.getResourceAsStream("Day01.txt")?.bufferedReader()?.readLines()
-            ?.map { it.toInt() }
-            .orEmpty()
+    val expenseReport: List<Int> = getInput(1).map { it.toInt() }
     return find2020SumOfTwo(expenseReport) to find2020SumOfThree(expenseReport)
 }
 

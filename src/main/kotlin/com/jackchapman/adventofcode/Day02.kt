@@ -1,8 +1,7 @@
 package com.jackchapman.adventofcode
 
 fun solveDay2(): Pair<Int, Int> {
-    val passwords: List<String> =
-        {}::class.java.classLoader.getResourceAsStream("Day02.txt")?.bufferedReader()?.readLines().orEmpty()
+    val passwords: List<String> = getInput(2)
 
     val matchingCount = passwords.count { isValidCount(it) }
     val matchingPosition = passwords.count { isValidPosition(it) }

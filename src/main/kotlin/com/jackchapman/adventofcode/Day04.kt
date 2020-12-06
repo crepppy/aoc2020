@@ -15,9 +15,7 @@ val requiredFields: Map<String, (String) -> Boolean> = mapOf(
 )
 
 fun solveDay4(): Pair<Int, Int> {
-    val passports: List<String> =
-        {}::class.java.classLoader.getResourceAsStream("Day04.txt")?.bufferedReader()?.readLines()
-            .orEmpty().joinToString("\n").split("\n\n")
+    val passports: List<String> = getInput(4).joinToString("\n").split("\n\n")
 
     val valid1 = passports.count { isValidPassport(it, false) }
     val valid2 = passports.count { isValidPassport(it) }
