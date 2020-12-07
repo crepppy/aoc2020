@@ -7,6 +7,7 @@ val days: Map<Int, () -> Pair<Any, Any>> = mapOf(
     4 to { solveDay4() },
     5 to { solveDay5() },
     6 to { solveDay6() },
+    7 to { solveDay7() },
 )
 
 fun main(args: Array<String>) {
